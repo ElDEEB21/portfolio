@@ -5,7 +5,6 @@ import { motion, useAnimation } from "framer-motion"
 import { Mail, ArrowUp, Terminal } from "lucide-react"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { profile } from "@/data/profile"
-import { VisitorCounter } from "@/components/visitor-counter"
 
 export default function Footer() {
   const [clickKey, setClickKey] = useState(0)
@@ -88,9 +87,6 @@ export default function Footer() {
             </a>
           </div>
 
-        </div>
-        <div className="mt-8 pt-4 border-t border-border/40">
-          <VisitorCounter />
         </div>
       </div>
     </footer>
