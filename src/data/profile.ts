@@ -95,7 +95,7 @@ export const profile: Profile = {
     technical: [
       "Python", "C++", "SQL", "HTML/CSS", "JavaScript",
       "Django", "Django REST Framework", "Django ORM",
-      "PostgreSQL", "SQLite", "MySQL",
+      "PostgreSQL", "SQLite", "MySQL", "Redis",
       "Docker", "Docker Compose", "Git", "GitHub Actions",
       "JWT", "Stripe", "Swagger/OpenAPI",
       "PyTorch", "TensorFlow/Keras", "OpenCV",
@@ -127,8 +127,8 @@ export const profile: Profile = {
   projects: [
     {
       name: "E-Commerce REST API",
-      description: "Production-ready e-commerce API covering user auth, products, cart, orders, and Stripe payment processing with webhook-driven status updates. Implements Service Layer and Selector Layer patterns across 5 modular Django apps.",
-      tech: ["Django REST Framework", "PostgreSQL", "Stripe", "JWT"],
+      description: "Production-ready e-commerce API covering user auth, products, cart, orders, and Stripe payment processing with webhook-driven status updates. Implements Service Layer and Selector Layer patterns across 5 modular Django apps. Added Redis caching with tiered TTLs, cache invalidation in the service layer on write operations, and environment-specific cache configurations.",
+      tech: ["Django REST Framework", "PostgreSQL", "Stripe", "JWT", "Redis"],
       repo: "https://github.com/ElDEEB21/ecommerce-api-drf",
       highlight: true,
     },
