@@ -26,8 +26,14 @@ export interface AISkillCategory {
 export const timelineSteps: TimelineStep[] = [
   {
     title: "Data Science Foundations",
-    subtitle: "DEPI · Andrew Ng ML Specialization",
-    description: "Started with Python for data analysis (Pandas, Matplotlib, Seaborn), built ML models with Scikit-Learn and XGBoost, and deployed pipelines with FastAPI and Streamlit. Completed the DEPI IBM Data Science track.",
+    subtitle: "DEPI IBM Data Science Track",
+    description: "Learned Python for Data Science core syntax and foundational programming. Used Jupyter Notebooks, GitHub, and cloud environments. Extracted and queried data using SQL and APIs. Analyzed and visualized data with Pandas, NumPy, Matplotlib, and Seaborn. Built regression, classification, clustering, and recommender systems using Scikit-Learn. Completed a hands-on capstone project applying the full data science pipeline to a real-world dataset.",
+    status: "completed",
+  },
+  {
+    title: "Machine Learning Specialization",
+    subtitle: "Andrew Ng — Stanford / DeepLearning.AI",
+    description: "Studied supervised learning (linear/logistic regression, neural networks, decision trees), advanced algorithms (ensembles, clustering, anomaly detection, recommender systems), and practical ML engineering (bias/variance, error analysis, CV pipelines, sklearn workflows). Built a strong theoretical and applied foundation in modern ML.",
     status: "completed",
   },
   {
@@ -49,14 +55,21 @@ export const timelineSteps: TimelineStep[] = [
     status: "stopped",
   },
   {
-    title: "Object Detection",
-    subtitle: "OpenCV DNN + MediaPipe",
-    description: "Explored object detection through OpenCV's DNN module and MediaPipe — face detection, pose estimation, hand tracking, and real-time object detection. Paused at the Transformers paper before diving deeper into detection-specific architectures.",
+    title: "Object Detection & Mobile CV",
+    subtitle: "Ala Mahlak — Driver Monitoring System",
+    description: "Built an on-device real-time Driver Monitoring System fusing Google ML Kit Face Mesh, YOLOv8n (ONNX), head pose estimation via pure Dart solvePnP, and multi-signal fusion. Implemented EAR (eye closure), MAR (yawning), gaze estimation, PERCLOS analysis, and a temporal state machine — entirely offline at ~15 FPS on mid-range Android.",
     status: "stopped",
   },
 ]
 
 export const aiProjects: AIProject[] = [
+  {
+    name: "Ala Mahlak — Driver Monitoring System",
+    description: "On-device real-time DMS for a Flutter ride-sharing app. Fuses Google ML Kit Face Mesh (468 landmarks), YOLOv8n ONNX object detection (phone, food/drink), pure Dart head pose estimation (solvePnP), EAR/MAR gaze analysis, and a temporal state machine with PERCLOS — classifying 7 distraction states at ~15 FPS entirely offline.",
+    tech: ["Flutter", "Google ML Kit", "YOLOv8n", "ONNX", "Dart", "BLoC"],
+    repo: "https://github.com/Ala-Mahlak/Ala-Mahlak-Flutter",
+    highlight: true,
+  },
   {
     name: "OpenCV-Learning",
     description: "Structured computer vision learning journey with OpenCV and MediaPipe — covers image processing fundamentals, DNN-based object/face detection, pose estimation, hand tracking, and real-time projects.",
@@ -68,25 +81,12 @@ export const aiProjects: AIProject[] = [
     description: "Facial emotion recognition on FER-2013 — head-to-head comparison between a custom CNN built from scratch and transfer learning with ResNet50V2 (TensorFlow/Keras). Includes EDA, class-balanced training, and confusion-matrix evaluation.",
     tech: ["TensorFlow/Keras", "ResNet50V2", "CNN", "Python"],
     repo: "https://github.com/ElDEEB21/FER-2013-CNN-ResNet",
-    highlight: true,
   },
   {
     name: "Intel Image Classification",
     description: "Image classification on the Intel dataset using two architectures: AlexNet and ResNet18 with PyTorch. Covers the full workflow from data preprocessing through training, evaluation, and inference.",
     tech: ["PyTorch", "AlexNet", "ResNet18", "Python"],
     repo: "https://github.com/ElDEEB21/intel-image-classification",
-  },
-  {
-    name: "Rossmann Store Sales Prediction",
-    description: "ML pipeline predicting Rossmann store sales — EDA, feature engineering, and XGBoost model with GridSearchCV (97.9% R²). Deployed via Streamlit, FastAPI, and Power BI.",
-    tech: ["XGBoost", "Scikit-Learn", "FastAPI", "Streamlit", "Power BI"],
-    repo: "https://github.com/ElDEEB21/Rossmann-Store-Sales-DS",
-    highlight: true,
-  },
-  {
-    name: "Graduation Project",
-    description: "Integrated computer vision (OpenCV/DNN) into a Flutter mobile application — combining CV processing capabilities with a cross-platform mobile interface for real-world deployment.",
-    tech: ["OpenCV", "Flutter", "Dart", "Python"],
   },
 ]
 
@@ -99,12 +99,16 @@ export const aiCertificates: AICertificate[] = [
     name: "Computer Vision Applications",
     issuer: "coursat.ai",
   },
+  {
+    name: "Machine Learning Specialization",
+    issuer: "Andrew Ng — Stanford / DeepLearning.AI",
+  },
 ]
 
 export const aiSkillCategories: AISkillCategory[] = [
   {
     label: "Frameworks & Libraries",
-    items: ["PyTorch", "TensorFlow/Keras", "OpenCV", "MediaPipe", "Scikit-Learn"],
+    items: ["PyTorch", "TensorFlow/Keras", "OpenCV", "MediaPipe", "Scikit-Learn", "ONNX"],
   },
   {
     label: "Data & Deployment",
@@ -112,6 +116,6 @@ export const aiSkillCategories: AISkillCategory[] = [
   },
   {
     label: "Concepts",
-    items: ["CNNs", "Transfer Learning", "Object Detection", "Pose Estimation", "Attention Mechanisms"],
+    items: ["CNNs", "Transfer Learning", "Object Detection", "Pose Estimation", "Attention Mechanisms", "PERCLOS"],
   },
 ]

@@ -146,18 +146,6 @@ export const profile: Profile = {
       repo: "https://github.com/ElDEEB21/postify-django",
       highlight: true,
     },
-    {
-      name: "FER-2013 CNN vs ResNet",
-      description: "Facial emotion recognition on FER-2013 — head-to-head comparison between a custom CNN built from scratch and transfer learning with ResNet50V2 (TensorFlow/Keras).",
-      tech: ["TensorFlow/Keras", "Python", "ResNet50V2", "CNN"],
-      repo: "https://github.com/ElDEEB21/FER-2013-CNN-ResNet",
-    },
-    {
-      name: "Rossmann Store Sales Prediction",
-      description: "ML pipeline predicting Rossmann store sales — EDA, feature engineering, and XGBoost model with GridSearchCV (97.9% R2). Deployed via Streamlit, FastAPI, and Power BI.",
-      tech: ["Python", "XGBoost", "Scikit-Learn", "Streamlit", "FastAPI", "Power BI"],
-      repo: "https://github.com/ElDEEB21/Rossmann-Store-Sales-DS",
-    },
   ],
   competitiveProgramming: [
     { title: "Codeforces Expert", stat: "Expert", label: "Rating — top competitive programming tier" },
