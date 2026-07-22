@@ -40,7 +40,7 @@ export default function AIHero() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="mb-6"
           >
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent-2/20 flex items-center justify-center border border-accent/20 mx-auto">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-accent-secondary/20 flex items-center justify-center border border-accent/20 mx-auto">
               <Brain size={36} className="text-accent" />
             </div>
           </motion.div>

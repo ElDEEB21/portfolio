@@ -68,7 +68,7 @@ export default function AIProjects() {
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-accent-2 hover:text-accent transition-colors mt-auto"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono text-accent-secondary hover:text-accent transition-colors mt-auto"
                   >
                     <ExternalLink size={12} />
                     View on GitHub
