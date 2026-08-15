@@ -12,9 +12,9 @@ describe("Header", () => {
     expect(screen.getByText("About")).toBeInTheDocument()
     expect(screen.getByText("Experience")).toBeInTheDocument()
     expect(screen.getByText("Skills")).toBeInTheDocument()
-    expect(screen.getByText("Competitive")).toBeInTheDocument()
     expect(screen.getByText("Projects")).toBeInTheDocument()
     expect(screen.getByText("Open Source")).toBeInTheDocument()
+    expect(screen.queryByText("Competitive")).not.toBeInTheDocument()
   })
 
   it("should render Curriculum Vitae link", () => {

@@ -32,7 +32,6 @@ export default function Header() {
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skills" },
-    { label: "Competitive", href: "#competitive" },
     { label: "Projects", href: "#projects" },
     { label: "Open Source", href: "#open-source" },
   ]
@@ -70,12 +69,12 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!isCvPage && (
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-0.5">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="px-4 py-2 text-xs font-mono text-muted hover:text-accent rounded-md hover:bg-accent-muted transition-all duration-200"
+                  className="px-3 py-2 text-xs font-mono text-muted hover:text-accent rounded-md hover:bg-accent-muted transition-all duration-200"
                 >
                   {item.label}
                 </a>
@@ -83,19 +82,19 @@ export default function Header() {
             </nav>
           )}
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2">
             <Link
               href="/ai-journey"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent-muted text-accent border border-accent/20 text-xs font-mono font-medium transition-all hover:bg-accent hover:text-bg-primary hover:border-accent hover:scale-105"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-accent-muted text-accent border border-accent/20 text-xs font-mono font-medium transition-all hover:bg-accent hover:text-bg-primary hover:border-accent hover:scale-105"
             >
-              <Brain size={14} />
+              <Brain size={13} />
               AI Journey
             </Link>
             <Link
               href={isCvPage ? "/" : "/cv"}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent/10 text-accent border border-accent/20 text-xs font-mono font-medium transition-all hover:bg-accent hover:text-bg-primary hover:border-accent hover:scale-105"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-accent text-bg-primary text-xs font-mono font-bold transition-all hover:brightness-110 hover:scale-105 shadow-lg shadow-accent/20"
             >
-              <FileText size={14} />
+              <FileText size={13} />
               {isCvPage ? "Back to Portfolio" : "Curriculum Vitae"}
             </Link>
           </div>
