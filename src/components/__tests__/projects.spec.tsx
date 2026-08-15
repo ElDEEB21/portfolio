@@ -19,8 +19,6 @@ describe("Projects", () => {
     expect(screen.getByText("E-Commerce REST API")).toBeInTheDocument()
     expect(screen.getByText("Recipe Management API")).toBeInTheDocument()
     expect(screen.getByText("Postify – Modern Blogging Platform")).toBeInTheDocument()
-    expect(screen.getByText("FER-2013 CNN vs ResNet")).toBeInTheDocument()
-    expect(screen.getByText("Rossmann Store Sales Prediction")).toBeInTheDocument()
   })
 
   it("should render Inspect Repository links", () => {

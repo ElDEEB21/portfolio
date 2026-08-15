@@ -29,6 +29,17 @@ export interface Certification {
   year: string
 }
 
+export interface OpenSourceContribution {
+  project: string
+  prNumber: string
+  type: "Refactor" | "Feature"
+  title: string
+  description: string
+  impact: string[]
+  tech: string[]
+  url: string
+}
+
 export interface Profile {
   name: string
   title: string
@@ -49,6 +60,7 @@ export interface Profile {
   education: Education[]
   certifications: Certification[]
   projects: Project[]
+  openSource: OpenSourceContribution[]
   competitiveProgramming: {
     title: string
     stat: string
@@ -151,5 +163,37 @@ export const profile: Profile = {
     { title: "Codeforces Expert", stat: "Expert", label: "Rating — top competitive programming tier" },
     { title: "ECPC 2023 Qualifications", stat: "17th / 280", label: "Ranked 17th place out of 280 teams" },
     { title: "ECPC 2023 Final", stat: "90th / 280", label: "Ranked 90th place out of 280 teams" },
+  ],
+  openSource: [
+    {
+      project: "delegate-skills",
+      prNumber: "#39",
+      type: "Refactor",
+      title: "Unify the relay event scanner",
+      description:
+        "Consolidated seven hand-duplicated relay event scanners into one parity-gated implementation shipped inline in every script — fixing an unbounded memory-growth defect, hardening chunk-boundary and malformed-stream parsing, and restoring Vibe's final event lost at stream close.",
+      impact: [
+        "Fixed a real unbounded memory-retention defect present in all seven scanner copies",
+        "21 test cases covering chunk boundaries, malformed input, and cap-reset recovery",
+        "Parity gates guarantee all inlined copies behave byte-identically",
+      ],
+      tech: ["Node.js", "Streaming Parsing", "Parity Testing", "GitHub Actions"],
+      url: "https://github.com/amElnagdy/delegate-skills/pull/39",
+    },
+    {
+      project: "delegate-skills",
+      prNumber: "#59",
+      type: "Feature",
+      title: "Add the cline-delegate skill",
+      description:
+        "Shipped the eleventh implementer skill for the delegation fleet — a Node-built-ins-only relay that drives the Cline CLI in headless JSON mode, keeps the brief on stdin, enforces plan/act safety, and never commits, leaving review and landing to the orchestrator.",
+      impact: [
+        "Cline joins the fleet with the same brief → dispatch → review → land loop as the other ten skills",
+        "Replaced stale docs with a relay verified against the real Cline 3.0.52 headless contract",
+        "Registered across discovery, setup, smoke, parity, isolation, and timeout gates",
+      ],
+      tech: ["Node.js", "Cline CLI", "CLI Tooling", "TDD"],
+      url: "https://github.com/amElnagdy/delegate-skills/pull/59",
+    },
   ],
 }

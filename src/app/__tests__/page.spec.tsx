@@ -42,6 +42,12 @@ describe("Home Page", () => {
     expect(headings.some((h) => h.textContent?.includes("Featured"))).toBe(true)
   })
 
+  it("should render Open Source section", () => {
+    render(<Home />)
+    const headings = screen.getAllByRole("heading", { level: 2 })
+    expect(headings.some((h) => h.textContent?.includes("Open Source"))).toBe(true)
+  })
+
   it("should render Footer", () => {
     render(<Home />)
     expect(screen.getByText(/Built with Next.js/)).toBeInTheDocument()

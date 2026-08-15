@@ -34,6 +34,7 @@ export default function Header() {
     { label: "Skills", href: "#skills" },
     { label: "Competitive", href: "#competitive" },
     { label: "Projects", href: "#projects" },
+    { label: "Open Source", href: "#open-source" },
   ]
 
   return (

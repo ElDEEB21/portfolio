@@ -61,4 +61,17 @@ describe("profile data", () => {
       expect(cp.label).toBeTruthy()
     })
   })
+
+  it("should have open source contributions with required fields", () => {
+    expect(profile.openSource.length).toBeGreaterThan(0)
+    profile.openSource.forEach((pr) => {
+      expect(pr.project).toBeTruthy()
+      expect(pr.prNumber).toMatch(/^#\d+$/)
+      expect(pr.title).toBeTruthy()
+      expect(pr.description).toBeTruthy()
+      expect(pr.impact.length).toBeGreaterThan(0)
+      expect(pr.tech.length).toBeGreaterThan(0)
+      expect(pr.url).toContain("github.com")
+    })
+  })
 })
