@@ -55,7 +55,7 @@ Full-stack blogging platform with Django MVT, featuring markdown editor, hierarc
 **Open-source contributor** — merged pull requests into community skill libraries for coding-agent delegation.
 
 - Refactored seven duplicated relay event scanners into one parity-gated implementation, fixing an unbounded memory-growth defect and adding 21 recovery test cases — [github.com/amElnagdy/delegate-skills/pull/39](https://github.com/amElnagdy/delegate-skills/pull/39)
-- Shipped a full Cline CLI delegation skill — a Node-built-ins-only relay with brief-on-stdin transport and plan/act safety, verified against the real CLI contract and its CI gates — [github.com/amElnagdy/delegate-skills/pull/59](https://github.com/amElnagdy/delegate-skills/pull/59)
+- Shipped implementer delegation skills for the Cline and GitHub Copilot CLIs — Node-built-ins-only relays with brief-on-stdin transport and plan/read-only safety, verified against the real CLI contracts and their CI gates — [github.com/amElnagdy/delegate-skills/pull/59](https://github.com/amElnagdy/delegate-skills/pull/59) · [github.com/amElnagdy/delegate-skills/pull/87](https://github.com/amElnagdy/delegate-skills/pull/87)
 
 ---
 

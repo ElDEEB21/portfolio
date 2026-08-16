@@ -37,7 +37,7 @@ export interface OpenSourceContribution {
   description: string
   impact: string[]
   tech: string[]
-  url: string
+  links: string[]
 }
 
 export interface Profile {
@@ -178,22 +178,25 @@ export const profile: Profile = {
         "Parity gates guarantee all inlined copies behave byte-identically",
       ],
       tech: ["Node.js", "Streaming Parsing", "Parity Testing", "GitHub Actions"],
-      url: "https://github.com/amElnagdy/delegate-skills/pull/39",
+      links: ["https://github.com/amElnagdy/delegate-skills/pull/39"],
     },
     {
       project: "delegate-skills",
-      prNumber: "#59",
+      prNumber: "#59 · #87",
       type: "Feature",
-      title: "Add the cline-delegate skill",
+      title: "Add implementer delegation skills",
       description:
-        "Shipped the eleventh implementer skill for the delegation fleet — a Node-built-ins-only relay that drives the Cline CLI in headless JSON mode, keeps the brief on stdin, enforces plan/act safety, and never commits, leaving review and landing to the orchestrator.",
+        "Shipped new implementer skills for the delegation fleet — Node-built-ins-only relays that drive each CLI in headless mode, keep the brief on stdin, enforce plan/read-only safety, and never commit, leaving review and landing to the orchestrator.",
       impact: [
         "Cline joins the fleet with the same brief → dispatch → review → land loop as the other ten skills",
-        "Replaced stale docs with a relay verified against the real Cline 3.0.52 headless contract",
-        "Registered across discovery, setup, smoke, parity, isolation, and timeout gates",
+        "GitHub Copilot CLI becomes an implementer too — JSONL event capture, denial detection, and resume flows verified live on Windows",
+        "Both relays are Node-built-ins-only, never commit, and are registered across the project's CI gates",
       ],
-      tech: ["Node.js", "Cline CLI", "CLI Tooling", "TDD"],
-      url: "https://github.com/amElnagdy/delegate-skills/pull/59",
+      tech: ["Node.js", "Cline CLI", "GitHub Copilot CLI", "TDD"],
+      links: [
+        "https://github.com/amElnagdy/delegate-skills/pull/59",
+        "https://github.com/amElnagdy/delegate-skills/pull/87",
+      ],
     },
   ],
 }

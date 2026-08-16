@@ -29,7 +29,7 @@ describe("CV Page", () => {
   it("should render Raw Markdown link", () => {
     render(<CvPage />)
     const mdLink = screen.getByText("Raw Markdown")
-    expect(mdLink).toHaveAttribute("href", "/resume.md")
+    expect(mdLink).toHaveAttribute("href", "/resume.md?v=3")
   })
 
   it("should render work summary section", () => {

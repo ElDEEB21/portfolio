@@ -7,8 +7,8 @@ import { profile } from "@/data/profile"
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 export default function CvPage() {
-  const localPdfPath = `${basePath}/Abdulrahman_Eldeeb_CV.pdf?v=6`
-  const localMarkdownPath = `${basePath}/resume.md?v=2`
+  const localPdfPath = `${basePath}/Abdulrahman_Eldeeb_CV.pdf?v=7`
+  const localMarkdownPath = `${basePath}/resume.md?v=3`
 
   return (
     <div className="min-h-screen bg-bg-primary text-fg py-8 relative">

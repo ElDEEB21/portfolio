@@ -90,16 +90,21 @@ export default function OpenSource() {
                   ))}
                 </div>
 
-                {/* Link */}
-                <a
-                  href={contribution.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-colors mt-auto text-accent hover:text-accent/80"
-                >
-                  <ExternalLink size={12} />
-                  View Pull Request
-                </a>
+                {/* Links */}
+                <div className="flex flex-wrap gap-4 mt-auto">
+                  {contribution.links.map((link, j) => (
+                    <a
+                      key={j}
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold transition-colors text-accent hover:text-accent/80"
+                    >
+                      <ExternalLink size={12} />
+                      View Pull Request
+                    </a>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
