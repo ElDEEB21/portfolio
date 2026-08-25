@@ -17,7 +17,7 @@ describe("CV Page", () => {
   it("should render name and title", () => {
     render(<CvPage />)
     expect(screen.getByText(/Abdulrahman Eldeeb/)).toBeInTheDocument()
-    expect(screen.getByText(/Backend Developer/)).toBeInTheDocument()
+    expect(screen.getByText(/Python Developer/)).toBeInTheDocument()
   })
 
   it("should render download PDF link", () => {
@@ -29,7 +29,7 @@ describe("CV Page", () => {
   it("should render Raw Markdown link", () => {
     render(<CvPage />)
     const mdLink = screen.getByText("Raw Markdown")
-    expect(mdLink).toHaveAttribute("href", "/resume.md?v=3")
+    expect(mdLink).toHaveAttribute("href", "/resume.md?v=4")
   })
 
   it("should render work summary section", () => {
