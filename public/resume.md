@@ -1,23 +1,23 @@
 # Abdulrahman Eldeeb
 
-**Backend Developer (Django)** · Fayoum, Egypt
+**Python Developer** · Fayoum, Egypt
 ar2724@fayoum.edu.eg · (+20) 102-671-9792 · https://github.com/ElDEEB21 · https://linkedin.com/in/abd-el-rahman-eldeeb
 
 ---
 
 ## Summary
 
-Computer Science graduate and Codeforces Expert focused on backend development with Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming.
+Computer Science graduate and Codeforces Expert focused on backend development with Python, using Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming.
 
 ---
 
 ## Professional Experience
 
 ### Recode Academy — Instructor
-*Sep 2024 – Present · Fayoum, Egypt*
+*Sep 2024 – Aug 2026 · Fayoum, Egypt*
 
-- Teach multiple courses including CS50, C++ programming, algorithms and data structures, and Object-Oriented Programming (OOP) core concepts
-- Deliver structured curriculum covering problem-solving fundamentals, computational thinking, and advanced programming paradigms to diverse student cohorts
+- Taught multiple courses including CS50, C++ programming, algorithms and data structures, and Object-Oriented Programming (OOP) core concepts
+- Delivered structured curriculum covering problem-solving fundamentals, computational thinking, and advanced programming paradigms to diverse student cohorts
 
 **Tech:** C++, Python, CS50
 

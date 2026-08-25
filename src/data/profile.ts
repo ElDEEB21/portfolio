@@ -70,11 +70,11 @@ export interface Profile {
 
 export const profile: Profile = {
   name: "Abdulrahman Eldeeb",
-  title: "Backend Developer (Django)",
+  title: "Python Developer",
   location: "Fayoum, Egypt",
-  headline: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Django, Docker, and TDD",
-  valueProp: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Django, Docker, and TDD. Experienced in secure authentication, Stripe integration, and clean architecture patterns.",
-  bio: "Computer Science graduate from Fayoum University and Codeforces Expert focused on backend development with Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming. Also a technical instructor and mentor, teaching CS50, C++, data structures, and OOP to students and coaching competitive programming teams.",
+  headline: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Python, Django REST Framework, Docker, and TDD",
+  valueProp: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs in Python with Django REST Framework, Docker, and TDD. Experienced in secure authentication, Stripe integration, and clean architecture patterns.",
+  bio: "Computer Science graduate from Fayoum University and Codeforces Expert focused on backend development with Python, using Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming. Also a technical instructor and mentor, teaching CS50, C++, data structures, and OOP to students and coaching competitive programming teams.",
   email: "ar2724@fayoum.edu.eg",
   github: "https://github.com/ElDEEB21",
   linkedin: "https://linkedin.com/in/abd-el-rahman-eldeeb",
@@ -83,12 +83,12 @@ export const profile: Profile = {
     {
       company: "Recode Academy",
       title: "Instructor",
-      dates: "Sep 2024 – Present",
+      dates: "Sep 2024 – Aug 2026",
       location: "Fayoum, Egypt",
       tech: ["C++", "Python", "CS50"],
       achievements: [
-        "Teach multiple courses including CS50, C++ programming, algorithms and data structures, and Object-Oriented Programming (OOP) core concepts",
-        "Deliver structured curriculum covering problem-solving fundamentals, computational thinking, and advanced programming paradigms to diverse student cohorts",
+        "Taught multiple courses including CS50, C++ programming, algorithms and data structures, and Object-Oriented Programming (OOP) core concepts",
+        "Delivered structured curriculum covering problem-solving fundamentals, computational thinking, and advanced programming paradigms to diverse student cohorts",
       ],
     },
     {
@@ -128,7 +128,7 @@ export const profile: Profile = {
       degree: "Bachelor of Computer Science and Artificial Intelligence",
       institution: "Fayoum University",
       year: "2026",
-      details: "Graduated Jul 2026. Relevant Coursework: Object-Oriented Programming, Data Structures, Algorithms Design & Analysis, Operating Systems, Database Management Systems, Computer Architecture",
+      details: "Graduated Jun 2026. Relevant Coursework: Object-Oriented Programming, Data Structures, Algorithms Design & Analysis, Operating Systems, Database Management Systems, Computer Architecture",
     },
   ],
   certifications: [

@@ -3,7 +3,7 @@ import { profile } from "../profile"
 describe("profile data", () => {
   it("should have required personal fields", () => {
     expect(profile.name).toBe("Abdulrahman Eldeeb")
-    expect(profile.title).toContain("Backend Developer")
+    expect(profile.title).toContain("Python Developer")
     expect(profile.location).toBe("Fayoum, Egypt")
     expect(profile.email).toContain("@")
     expect(profile.github).toContain("github.com")

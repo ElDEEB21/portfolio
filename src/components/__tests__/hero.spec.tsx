@@ -25,7 +25,7 @@ describe("Hero", () => {
 
   it("should render title", () => {
     render(<Hero />)
-    expect(screen.getByText("Backend Developer (Django)")).toBeInTheDocument()
+    expect(screen.getByText("Python Developer")).toBeInTheDocument()
   })
 
   it("should render location", () => {

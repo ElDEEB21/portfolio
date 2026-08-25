@@ -34,7 +34,7 @@ describe("Experience", () => {
 
   it("should render achievements for each role", () => {
     render(<Experience />)
-    expect(screen.getByText(/Teach multiple courses/)).toBeInTheDocument()
+    expect(screen.getByText(/Taught multiple courses/)).toBeInTheDocument()
     expect(screen.getByText(/Mentored 15–20 students/)).toBeInTheDocument()
   })
 })
