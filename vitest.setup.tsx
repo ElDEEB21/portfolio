@@ -1,4 +1,5 @@
 import "@testing-library/jest-dom/vitest"
+import type { ComponentProps } from "react"
 
 // Polyfill IntersectionObserver for framer-motion whileInView
 class MockIntersectionObserver {
@@ -50,7 +51,7 @@ vi.mock("next/font/google", () => ({
 
 // Mock next/link
 vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: any) => {
+  default: ({ children, href, ...props }: ComponentProps<"a"> & { href: string }) => {
     // Strip framer-motion props that shouldn't go to <a>
     const { onMouseEnter, onMouseLeave, onDrag, ...anchorProps } = props
     return <a href={href} {...anchorProps}>{children}</a>
