@@ -12,6 +12,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const isCvPage = pathname === "/cv"
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -28,7 +29,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const anchorPrefix = pathname === "/" ? "" : "/"
+  const anchorPrefix = pathname === "/" ? "" : `${basePath}/`
   const navItems = [
     { label: "About", href: `${anchorPrefix}#about` },
     { label: "Experience", href: `${anchorPrefix}#experience` },
