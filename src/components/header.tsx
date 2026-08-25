@@ -12,6 +12,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
   const isCvPage = pathname === "/cv"
+  const isHome = pathname === "/"
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
   const { scrollYProgress } = useScroll()
@@ -71,7 +72,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          {!isCvPage && (
+          {isHome && (
             <nav className="hidden md:flex items-center gap-0.5">
               {navItems.map((item) => (
                 <a
@@ -103,19 +104,21 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-muted hover:text-accent transition-colors"
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          {isHome && (
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden p-2 text-muted hover:text-accent transition-colors"
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          )}
         </div>
       </header>
 
       {/* Mobile Navigation Drawer */}
       <AnimatePresence>
-        {isOpen && !isCvPage && (
+        {isOpen && isHome && (
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
