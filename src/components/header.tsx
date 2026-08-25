@@ -28,12 +28,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const anchorPrefix = pathname === "/" ? "" : "/"
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Open Source", href: "#open-source" },
+    { label: "About", href: `${anchorPrefix}#about` },
+    { label: "Experience", href: `${anchorPrefix}#experience` },
+    { label: "Skills", href: `${anchorPrefix}#skills` },
+    { label: "Projects", href: `${anchorPrefix}#projects` },
+    { label: "Open Source", href: `${anchorPrefix}#open-source` },
+    { label: "Contact", href: `${anchorPrefix}#contact` },
   ]
 
   return (
