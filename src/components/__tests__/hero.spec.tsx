@@ -36,6 +36,7 @@ describe("Hero", () => {
   it("should render tech badges", () => {
     render(<Hero />)
     expect(screen.getByText("Django")).toBeInTheDocument()
+    expect(screen.getByText("FastAPI")).toBeInTheDocument()
     expect(screen.getByText("Python")).toBeInTheDocument()
     expect(screen.getByText("Docker")).toBeInTheDocument()
     expect(screen.getByText("C++")).toBeInTheDocument()

@@ -72,9 +72,9 @@ export const profile: Profile = {
   name: "Abdulrahman Eldeeb",
   title: "Python Developer",
   location: "Fayoum, Egypt",
-  headline: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Python, Django REST Framework, Docker, and TDD",
-  valueProp: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs in Python with Django REST Framework, Docker, and TDD. Experienced in secure authentication, Stripe integration, and clean architecture patterns.",
-  bio: "Computer Science graduate from Fayoum University and Codeforces Expert focused on backend development with Python, using Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming. Also a technical instructor and mentor, teaching CS50, C++, data structures, and OOP to students and coaching competitive programming teams.",
+  headline: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Python, Django REST Framework, FastAPI, Docker, and TDD",
+  valueProp: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs in Python with Django REST Framework and FastAPI, Docker, and TDD. Experienced in secure JWT authentication, Stripe integration, Celery background tasks, and clean architecture patterns.",
+  bio: "Computer Science graduate from Fayoum University and Codeforces Expert focused on backend development with Python, using Django, Django REST Framework, and FastAPI. Experienced in building production-ready RESTful APIs using Dockerized workflows, JWT authentication with Redis-backed revocation, Celery background tasks, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming. Also a technical instructor and mentor, teaching CS50, C++, data structures, and OOP to students and coaching competitive programming teams.",
   email: "ar2724@fayoum.edu.eg",
   github: "https://github.com/ElDEEB21",
   linkedin: "https://linkedin.com/in/abd-el-rahman-eldeeb",
@@ -106,9 +106,9 @@ export const profile: Profile = {
   skills: {
     technical: [
       "Python", "C++", "SQL", "HTML/CSS", "JavaScript",
-      "Django", "Django REST Framework", "Django ORM",
+      "Django", "Django REST Framework", "Django ORM", "FastAPI", "SQLModel", "Pydantic",
       "PostgreSQL", "SQLite", "MySQL", "Redis",
-      "Docker", "Docker Compose", "Git", "GitHub Actions",
+      "Celery", "Alembic", "Docker", "Docker Compose", "Git", "GitHub Actions",
       "JWT", "Stripe", "Swagger/OpenAPI",
       "PyTorch", "TensorFlow/Keras", "OpenCV",
       "Scikit-Learn", "Pandas", "NumPy",
@@ -116,6 +116,7 @@ export const profile: Profile = {
     domain: [
       "RESTful APIs", "MVT Architecture", "Service Layer",
       "Selector Layer", "Clean Architecture", "TDD",
+      "Async Python", "Background Tasks", "Rate Limiting", "RBAC",
       "Competitive Programming", "Web Scraping",
     ],
     soft: [
@@ -137,6 +138,13 @@ export const profile: Profile = {
     { name: "Build a Backend REST API with Python & Django - Advanced", issuer: "Mark Winterbottom & Brooke Rutherford (Udemy)", year: "2025" },
   ],
   projects: [
+    {
+      name: "Bookly - Book Management API",
+      description: "Async book catalog REST API built with FastAPI and SQLModel covering JWT auth with refresh rotation and Redis blocklist, email verification and password reset delivered via Celery background workers, role-based access with owner checks, books/reviews/tags domains, Alembic migrations, and Redis rate limiting.",
+      tech: ["FastAPI", "SQLModel", "PostgreSQL", "Redis", "Celery", "JWT"],
+      repo: "https://github.com/ElDEEB21/bookly-fastapi",
+      highlight: true,
+    },
     {
       name: "E-Commerce REST API",
       description: "Production-ready e-commerce API covering user auth, products, cart, orders, and Stripe payment processing with webhook-driven status updates. Implements Service Layer and Selector Layer patterns across 5 modular Django apps. Added Redis caching with tiered TTLs, cache invalidation in the service layer on write operations, and environment-specific cache configurations.",

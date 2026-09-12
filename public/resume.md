@@ -7,7 +7,7 @@ ar2724@fayoum.edu.eg · (+20) 102-671-9792 · https://github.com/ElDEEB21 · htt
 
 ## Summary
 
-Computer Science graduate and Codeforces Expert focused on backend development with Python, using Django and Django REST Framework. Experienced in building production-ready RESTful APIs using Dockerized workflows, token/JWT authentication, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming.
+Computer Science graduate and Codeforces Expert focused on backend development with Python, using Django, Django REST Framework, and FastAPI. Experienced in building production-ready RESTful APIs using Dockerized workflows, JWT authentication with Redis-backed revocation, Celery background tasks, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming.
 
 ---
 
@@ -33,20 +33,20 @@ Computer Science graduate and Codeforces Expert focused on backend development w
 
 ## Projects
 
-### Recipe API — [github.com/ElDEEB21/recipe-api-app](https://github.com/ElDEEB21/recipe-api-app)
-*Mar 2026 – Apr 2026*
-Production-style Recipe Management API with user registration, token authentication, profile endpoints, and strict ownership isolation for user data. Full CRUD for recipes, tags, and ingredients with advanced filtering, assigned-only queries, and multipart image upload. Applied test-driven development with comprehensive unit tests, health checks, DB readiness workflow, and Docker Compose setup.
-*Tech: Django REST Framework, PostgreSQL, Docker, OpenAPI, TDD*
+### Bookly - Book Management API — [github.com/ElDEEB21/bookly-fastapi](https://github.com/ElDEEB21/bookly-fastapi)
+*Aug 2026 – Sep 2026*
+Async book catalog REST API built with **FastAPI** and **SQLModel**. Implemented **JWT auth** with refresh rotation and **Redis blocklist** for revoked tokens, plus **role-based access** with owner checks. Email verification and password reset delivered via **Celery background workers** (FastAPI-Mail). Books/reviews/tags domains, **Alembic** migrations, and Redis rate limiting.
+*Tech: FastAPI, SQLModel, PostgreSQL, Redis, Celery, JWT*
 
 ### E-Commerce REST API — [github.com/ElDEEB21/ecommerce-api-drf](https://github.com/ElDEEB21/ecommerce-api-drf)
 *Feb 2026 – Jun 2026*
 Production-ready e-commerce API covering user auth, products, cart, orders, and **Stripe** payment processing with webhook-driven status updates. Applied **Service Layer & Selector Layer** patterns across 5 modular Django apps. Implemented **JWT auth** with token rotation, blacklisting, and HTTP-only cookies. Added **Redis caching** with tiered TTLs and service-layer cache invalidation on writes.
 *Tech: Django REST Framework, PostgreSQL, Stripe, JWT, Redis*
 
-### Postify – Modern Blogging Platform — [github.com/ElDEEB21/postify-django](https://github.com/ElDEEB21/postify-django)
-*Dec 2025*
-Full-stack blogging platform with Django MVT, featuring markdown editor, hierarchical comments, and **Google OAuth** via Django Allauth. Creator dashboard with post analytics, view tracking, and Chart.js trend visualization. Organized into 5 Django apps with custom error pages and search/filter functionality.
-*Tech: Django MVT, SQLite, Chart.js, Django Allauth*
+### Recipe API — [github.com/ElDEEB21/recipe-api-app](https://github.com/ElDEEB21/recipe-api-app)
+*Mar 2026 – Apr 2026*
+Production-style Recipe Management API with user registration, token authentication, profile endpoints, and strict ownership isolation for user data. Full CRUD for recipes, tags, and ingredients with advanced filtering, assigned-only queries, and multipart image upload. Applied test-driven development with comprehensive unit tests, health checks, DB readiness workflow, and Docker Compose setup.
+*Tech: Django REST Framework, PostgreSQL, Docker, OpenAPI, TDD*
 
 ---
 
@@ -69,11 +69,11 @@ Relevant Coursework: Object-Oriented Programming, Data Structures, Algorithms De
 ## Technical Skills
 
 **Languages:** Python, C++, SQL, HTML/CSS, JavaScript
-**Backend:** Django, Django REST Framework, Django ORM, Django Allauth, Class-Based Views, ViewSets, Routers
+**Backend:** Django, Django REST Framework, Django ORM, FastAPI, SQLModel, Pydantic, Celery, Class-Based Views, ViewSets, Routers
 **Databases:** PostgreSQL, SQLite, MySQL, Redis
-**APIs & Auth:** RESTful APIs, Token Authentication, JWT (SimpleJWT), Permissions, Throttling, Stripe Integration, Webhooks, Swagger/OpenAPI
-**Architecture:** MVT, Service Layer, Selector Layer, Modular App Design, Clean Architecture, Test-Driven Development (TDD)
-**Tools:** Git, GitHub, GitHub Actions (CI/CD), Docker, Docker Compose, Flake8, Postman, pip, virtualenv, django-filter
+**APIs & Auth:** RESTful APIs, Token Authentication, JWT (SimpleJWT, PyJWT), Redis Blocklist, Permissions, Throttling, Rate Limiting, Stripe Integration, Webhooks, Swagger/OpenAPI
+**Architecture:** MVT, Service Layer, Selector Layer, Modular App Design, RBAC, Async Python, Background Tasks, Clean Architecture, Test-Driven Development (TDD)
+**Tools:** Git, GitHub, GitHub Actions (CI/CD), Docker, Docker Compose, Alembic, Uvicorn, Flake8, Postman, pip, virtualenv, django-filter
 **Data & ML:** PyTorch, TensorFlow/Keras, OpenCV, Scikit-Learn, Pandas, NumPy, Power BI
 **AI-Assisted Dev:** Coding agents (opencode, Claude Code), Model Context Protocol (MCP), multi-agent systems, agent orchestration, skill/tool development for AI workflows
 **Other:** Web Scraping (Beautiful Soup, Selenium), Jupyter Notebooks, Google Colab

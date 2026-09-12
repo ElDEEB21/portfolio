@@ -91,7 +91,7 @@ export default function About() {
                   </div>
                   <div className="flex items-center justify-between pb-3 border-b border-border/50">
                     <span className="text-sm text-muted">Core Frameworks</span>
-                    <span className="text-sm font-mono text-accent font-bold">Django & DRF</span>
+                    <span className="text-sm font-mono text-accent font-bold">Django, DRF & FastAPI</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted">API Methodologies</span>

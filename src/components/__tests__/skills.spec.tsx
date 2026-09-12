@@ -26,12 +26,15 @@ describe("Skills", () => {
     render(<Skills />)
     expect(screen.getByText("Python")).toBeInTheDocument()
     expect(screen.getByText("Django")).toBeInTheDocument()
+    expect(screen.getByText("FastAPI")).toBeInTheDocument()
+    expect(screen.getByText("Celery")).toBeInTheDocument()
   })
 
   it("should render domain skills", () => {
     render(<Skills />)
     expect(screen.getByText("RESTful APIs")).toBeInTheDocument()
     expect(screen.getByText("TDD")).toBeInTheDocument()
+    expect(screen.getByText("Background Tasks")).toBeInTheDocument()
   })
 
   it("should render soft skills", () => {

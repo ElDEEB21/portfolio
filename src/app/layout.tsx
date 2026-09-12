@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${SITE_URL}${BASE_PATH}`),
   title: "Abdulrahman Eldeeb — Python Developer",
   description:
-    "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, Docker, and TDD.",
+    "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, FastAPI, Docker, and TDD.",
   openGraph: {
     title: "Abdulrahman Eldeeb — Python Developer",
     description:
-      "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, Docker, and TDD.",
+      "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, FastAPI, Docker, and TDD.",
     url: "/",
     siteName: "Abdulrahman Eldeeb — Portfolio",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Abdulrahman Eldeeb — Python Developer" }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Abdulrahman Eldeeb — Python Developer",
     description:
-      "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, Docker, and TDD.",
+      "Computer Science graduate and Codeforces Expert. Building production-ready RESTful APIs with Python, Django REST Framework, FastAPI, Docker, and TDD.",
     images: ["/og-image.png"],
   },
 }

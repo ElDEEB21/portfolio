@@ -20,6 +20,7 @@ export default function Hero() {
 
   const techBadges = [
     { name: "Python" },
+    { name: "FastAPI" },
     { name: "Django" },
     { name: "Docker" },
     { name: "C++" },

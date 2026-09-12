@@ -17,6 +17,7 @@ describe("Projects", () => {
   it("should render all project names", () => {
     render(<Projects />)
     expect(screen.getByText("E-Commerce REST API")).toBeInTheDocument()
+    expect(screen.getByText("Bookly - Book Management API")).toBeInTheDocument()
     expect(screen.getByText("Recipe Management API")).toBeInTheDocument()
     expect(screen.getByText("Postify – Modern Blogging Platform")).toBeInTheDocument()
   })
@@ -24,7 +25,7 @@ describe("Projects", () => {
   it("should render Inspect Repository links", () => {
     render(<Projects />)
     const links = screen.getAllByText("Inspect Repository")
-    expect(links.length).toBeGreaterThanOrEqual(3)
+    expect(links.length).toBeGreaterThanOrEqual(4)
   })
 
   it("should highlight featured projects", () => {
