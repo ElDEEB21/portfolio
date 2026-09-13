@@ -1,12 +1,19 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award } from "lucide-react"
 import { aiCertificates } from "@/data/ai-journey"
+
+const pad = (n: number) => String(n + 1).padStart(2, "0")
 
 export default function AICertificates() {
   return (
-    <section className="py-28 bg-bg-elevated">
+    <section
+      id="credentials"
+      className="py-24 bg-bg-elevated/40 relative scroll-mt-20"
+    >
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -14,33 +21,35 @@ export default function AICertificates() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 mb-3">
-            <Award size={18} className="text-accent" />
-            <span className="text-xs font-mono text-accent tracking-widest uppercase">Certificates</span>
-          </div>
+          <p className="text-xs font-mono text-accent tracking-widest uppercase mb-3">
+            Certificates
+          </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             Verified <span className="gradient-text">Credentials</span>
           </h2>
+          <p className="text-sm text-muted font-mono mb-10 max-w-xl">
+            Credentials in ledger order.
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-5 max-w-2xl mx-auto">
+          <ol className="border-b border-border max-w-3xl">
             {aiCertificates.map((cert, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="p-6 rounded-lg bg-bg-card border border-border card-hover text-center"
+              <li
+                key={cert.name}
+                className="flex items-baseline gap-4 border-t border-border py-4"
               >
-                <div className="w-10 h-10 rounded-full bg-accent-muted/20 flex items-center justify-center mx-auto mb-4">
-                  <Award size={20} className="text-accent" />
+                <span className="font-mono text-sm text-muted shrink-0">
+                  {pad(i)}
+                </span>
+                <div>
+                  <h3 className="text-base font-semibold text-fg">
+                    {cert.name}
+                  </h3>
+                  <p className="text-sm font-mono text-muted">{cert.issuer}</p>
                 </div>
-                <h3 className="text-base font-semibold mb-2">{cert.name}</h3>
-                <p className="text-sm font-mono text-accent">{cert.issuer}</p>
-              </motion.div>
+              </li>
             ))}
-          </div>
+          </ol>
         </motion.div>
       </div>
     </section>

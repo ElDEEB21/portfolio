@@ -133,7 +133,7 @@ export default function Hero() {
 
               <Link
                 href="/cv"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-bg-primary font-bold text-sm transition-all hover:brightness-110 hover:shadow-lg hover:shadow-accent/20 hover:scale-[1.03]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-accent text-bg-primary font-bold text-sm transition-all hover:brightness-110 border border-accent"
               >
                 <FileText size={16} />
                 View CV / Resume

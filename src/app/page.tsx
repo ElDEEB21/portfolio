@@ -19,8 +19,8 @@ export default function Home() {
       <CompetitiveProgramming />
       <Projects />
       <OpenSource />
-      <Contact />
       <AICtaBanner />
+      <Contact />
       <Footer />
     </main>
   )

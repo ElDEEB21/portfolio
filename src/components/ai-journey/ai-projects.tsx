@@ -1,12 +1,25 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FolderGit2, ExternalLink, Star } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 import { aiProjects } from "@/data/ai-journey"
+
+const lead = aiProjects.find((p) => p.highlight) ?? aiProjects[0]
+const rest = aiProjects.filter((p) => p !== lead)
+
+const signals: Array<{ term: string; value: string }> = [
+  { term: "States", value: "7 distraction states" },
+  { term: "Speed", value: "About 15 FPS" },
+  { term: "Mode", value: "Fully offline" },
+  {
+    term: "Perception",
+    value: "Face Mesh 468 landmarks, YOLOv8n, solvePnP",
+  },
+]
 
 export default function AIProjects() {
   return (
-    <section className="py-28">
+    <section id="proof" className="py-24 relative scroll-mt-20">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
@@ -14,67 +27,118 @@ export default function AIProjects() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-3 mb-3">
-            <FolderGit2 size={18} className="text-accent" />
-            <span className="text-xs font-mono text-accent tracking-widest uppercase">AI Projects</span>
-          </div>
+          <p className="text-xs font-mono text-accent tracking-widest uppercase mb-3">
+            AI Projects
+          </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
             What I&apos;ve <span className="gradient-text">Explored</span>
           </h2>
+          <p className="text-sm text-muted font-mono mb-10 max-w-xl">
+            One lead build plus supporting projects, each with its repository.
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-5">
-            {aiProjects.map((project, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                className={`relative p-6 rounded-lg border card-hover flex flex-col ${
-                  project.highlight
-                    ? "bg-bg-card border-accent/20"
-                    : "bg-bg-card border-border"
-                }`}
+          <div className="grid gap-5">
+            {lead && (
+              <article className="glass-panel p-6 rounded-2xl md:p-8 relative overflow-hidden border-accent/30">
+                <div className="flex flex-wrap items-center gap-3 mb-5">
+                  <span className="inline-flex min-h-[44px] items-center rounded-md border border-accent/30 bg-accent-muted px-3 text-sm font-semibold uppercase tracking-wider text-accent">
+                    Lead
+                  </span>
+                  <h3 className="text-xl font-semibold text-fg">
+                    {lead.name}
+                  </h3>
+                </div>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-3">
+                      Signals
+                    </h4>
+                    <dl className="border-y border-border">
+                      {signals.map((signal) => (
+                        <div
+                          key={signal.term}
+                          className="flex gap-3 py-3 border-b border-border last:border-b-0"
+                        >
+                          <dt className="w-24 shrink-0 text-sm text-muted">
+                            {signal.term}
+                          </dt>
+                          <dd className="text-[15px] text-fg">
+                            {signal.value}
+                          </dd>
+                        </div>
+                      ))}
+                      <div className="flex gap-3 py-3">
+                        <dt className="w-24 shrink-0 text-sm text-muted">
+                          Stack
+                        </dt>
+                        <dd className="text-[15px] text-fg">
+                          {lead.tech.join(", ")}
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-3">
+                      TL;DR
+                    </h4>
+                    <p className="text-[15px] leading-relaxed text-muted">
+                      {lead.description}
+                    </p>
+                    {lead.repo && (
+                      <a
+                        href={lead.repo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex min-h-[44px] items-center gap-2 py-3 text-[15px] font-semibold text-accent underline underline-offset-4 hover:text-accent/80 transition-colors"
+                      >
+                        <ExternalLink
+                          size={16}
+                          aria-hidden="true"
+                          className="shrink-0"
+                        />
+                        View on GitHub
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            )}
+
+            {rest.map((project) => (
+              <article
+                key={project.name}
+                className="glass-panel p-6 rounded-2xl"
               >
-                {project.highlight && (
-                  <div className="absolute top-4 right-4">
-                    <Star size={14} className="text-accent fill-accent" />
-                  </div>
-                )}
-
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-accent-muted/20 flex items-center justify-center">
-                    <FolderGit2 size={16} className="text-accent" />
-                  </div>
-                </div>
-
-                <h3 className="text-lg font-semibold mb-2">{project.name}</h3>
-                <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{project.description}</p>
-
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {project.tech.map((t, j) => (
-                    <span
-                      key={j}
-                      className="px-2 py-0.5 text-[11px] font-mono rounded bg-accent-muted/10 text-accent/80 border border-accent/10"
-                    >
+                <h3 className="text-xl font-semibold text-fg mb-3">
+                  {project.name}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted mb-3">
+                  {project.description}
+                </p>
+                <ul className="flex flex-wrap gap-3 mb-3">
+                  {project.tech.map((t) => (
+                    <li key={t} className="text-sm text-muted">
                       {t}
-                    </span>
+                    </li>
                   ))}
-                </div>
-
+                </ul>
                 {project.repo && (
                   <a
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-mono text-accent-2 hover:text-accent transition-colors mt-auto"
+                    className="inline-flex min-h-[44px] items-center gap-2 text-sm font-mono font-semibold text-accent hover:text-accent/80 transition-colors"
                   >
-                    <ExternalLink size={12} />
+                    <ExternalLink
+                      size={16}
+                      aria-hidden="true"
+                      className="shrink-0"
+                    />
                     View on GitHub
                   </a>
                 )}
-              </motion.div>
+              </article>
             ))}
           </div>
         </motion.div>
