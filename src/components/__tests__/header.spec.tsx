@@ -9,18 +9,18 @@ describe("Header", () => {
 
   it("should render grouped navigation links", () => {
     render(<Header />)
-    expect(screen.getByText("Proof")).toBeInTheDocument()
-    expect(screen.getByText("Work")).toBeInTheDocument()
+    expect(screen.getByText("About")).toBeInTheDocument()
     expect(screen.getByText("Teaching")).toBeInTheDocument()
+    expect(screen.getByText("Work")).toBeInTheDocument()
+    expect(screen.getByText("Open Source")).toBeInTheDocument()
     expect(screen.getByText("Contact")).toBeInTheDocument()
   })
 
-  it("should render More popover containing About, Skills, Open Source", () => {
+  it("should render More popover containing Skills and Proof", () => {
     render(<Header />)
     fireEvent.click(screen.getByText("More"))
-    expect(screen.getByText("About")).toBeInTheDocument()
     expect(screen.getByText("Skills")).toBeInTheDocument()
-    expect(screen.getByText("Open Source")).toBeInTheDocument()
+    expect(screen.getByText("Proof")).toBeInTheDocument()
   })
 
   it("should render Curriculum Vitae link", () => {

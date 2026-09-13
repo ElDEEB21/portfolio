@@ -17,19 +17,19 @@ import {
 import { profile } from "@/data/profile"
 
 const GROUP_LINKS = [
-  { label: "Proof", id: "competitive" },
-  { label: "Work", id: "projects" },
+  { label: "About", id: "about" },
   { label: "Teaching", id: "experience" },
+  { label: "Work", id: "projects" },
+  { label: "Open Source", id: "open-source" },
   { label: "Contact", id: "contact" },
 ]
 
 const MORE_LINKS = [
-  { label: "About", id: "about" },
   { label: "Skills", id: "skills" },
-  { label: "Open Source", id: "open-source" },
+  { label: "Proof", id: "competitive" },
 ]
 
-const PAGE_ORDER = ["experience", "competitive", "projects", "contact"]
+const PAGE_ORDER = ["about", "experience", "projects", "open-source", "contact"]
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -59,33 +59,38 @@ export default function Header() {
   const progress = activeId ? (PAGE_ORDER.indexOf(activeId) + 1) / PAGE_ORDER.length : 0
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  useEffect(() => {
-    if (!isHome) return
-    const ids = [...GROUP_LINKS.map((l) => l.id), ...MORE_LINKS.map((l) => l.id)]
-    const sections = ids
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null)
-    if (sections.length === 0) return
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            const id = (entry.target as HTMLElement).id
-            if (PAGE_ORDER.includes(id)) setObservedId(id)
-          }
+    let ticking = false
+    const update = () => {
+      ticking = false
+      const y = window.scrollY
+      setIsScrolled(y > 20)
+      if (!isHome) {
+        setObservedId(null)
+        return
+      }
+      const probe = y + window.innerHeight * 0.35
+      let current: string | null = null
+      for (const link of [...GROUP_LINKS, ...MORE_LINKS]) {
+        const el = document.getElementById(link.id)
+        if (el && el.getBoundingClientRect().top + y <= probe) {
+          current = link.id
         }
-      },
-      { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
-    )
-    sections.forEach((s) => observer.observe(s))
-    return () => observer.disconnect()
+      }
+      setObservedId(current && PAGE_ORDER.includes(current) ? current : null)
+    }
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true
+        requestAnimationFrame(update)
+      }
+    }
+    update()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    window.addEventListener("resize", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("resize", onScroll)
+    }
   }, [isHome])
 
   useEffect(() => {
