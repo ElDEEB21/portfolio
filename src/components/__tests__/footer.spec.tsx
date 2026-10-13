@@ -8,7 +8,7 @@ describe("Footer", () => {
 
   it("should render email link", () => {
     render(<Footer />)
-    expect(screen.getByText(/ar2724@fayoum\.edu\.eg/)).toBeInTheDocument()
+    expect(screen.getByText(/eldeebabdulrahman6@gmail\.com/)).toBeInTheDocument()
   })
 
   it("should render social links", () => {
@@ -32,7 +32,7 @@ describe("Footer", () => {
   it("should have Email link", () => {
     render(<Footer />)
     const emailLink = screen.getByLabelText("Email")
-    expect(emailLink).toHaveAttribute("href", "mailto:ar2724@fayoum.edu.eg")
+    expect(emailLink).toHaveAttribute("href", "mailto:eldeebabdulrahman6@gmail.com")
   })
 
   it("should have Back to top button", () => {

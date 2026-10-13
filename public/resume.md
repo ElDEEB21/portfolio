@@ -1,7 +1,7 @@
 # Abdulrahman Eldeeb
 
 **Python Developer** · Fayoum, Egypt
-ar2724@fayoum.edu.eg · (+20) 102-671-9792 · https://github.com/ElDEEB21 · https://linkedin.com/in/abd-el-rahman-eldeeb
+eldeebabdulrahman6@gmail.com · (+20) 102-671-9792 · https://github.com/ElDEEB21 · https://linkedin.com/in/abd-el-rahman-eldeeb
 
 ---
 

@@ -75,7 +75,7 @@ export const profile: Profile = {
   headline: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs with Python, Django REST Framework, FastAPI, Docker, and TDD",
   valueProp: "Computer Science graduate and Codeforces Expert — building production-ready RESTful APIs in Python with Django REST Framework and FastAPI, Docker, and TDD. Experienced in secure JWT authentication, Stripe integration, Celery background tasks, and clean architecture patterns.",
   bio: "Computer Science graduate from Fayoum University and Codeforces Expert focused on backend development with Python, using Django, Django REST Framework, and FastAPI. Experienced in building production-ready RESTful APIs using Dockerized workflows, JWT authentication with Redis-backed revocation, Celery background tasks, automated testing, and OpenAPI documentation. Strong foundation in algorithms and competitive programming. Also a technical instructor and mentor, teaching CS50, C++, data structures, and OOP to students and coaching competitive programming teams.",
-  email: "ar2724@fayoum.edu.eg",
+  email: "eldeebabdulrahman6@gmail.com",
   github: "https://github.com/ElDEEB21",
   linkedin: "https://linkedin.com/in/abd-el-rahman-eldeeb",
   phone: "(+20) 102-671-9792",

@@ -44,7 +44,7 @@ describe("Hero", () => {
 
   it("should render email with copy button", () => {
     render(<Hero />)
-    expect(screen.getByText("ar2724@fayoum.edu.eg")).toBeInTheDocument()
+    expect(screen.getByText("eldeebabdulrahman6@gmail.com")).toBeInTheDocument()
     expect(screen.getByTitle("Copy email to clipboard")).toBeInTheDocument()
   })
 
@@ -52,7 +52,7 @@ describe("Hero", () => {
     render(<Hero />)
     const copyButton = screen.getByTitle("Copy email to clipboard")
     fireEvent.click(copyButton)
-    expect(navigator.clipboard.writeText).toHaveBeenCalledWith("ar2724@fayoum.edu.eg")
+    expect(navigator.clipboard.writeText).toHaveBeenCalledWith("eldeebabdulrahman6@gmail.com")
   })
 
   it("should show check icon after copying", () => {
@@ -66,7 +66,7 @@ describe("Hero", () => {
     render(<Hero />)
     expect(screen.getByLabelText("GitHub")).toHaveAttribute("href", "https://github.com/ElDEEB21")
     expect(screen.getByLabelText("LinkedIn")).toHaveAttribute("href", "https://linkedin.com/in/abd-el-rahman-eldeeb")
-    expect(screen.getByLabelText("Email")).toHaveAttribute("href", "mailto:ar2724@fayoum.edu.eg")
+    expect(screen.getByLabelText("Email")).toHaveAttribute("href", "mailto:eldeebabdulrahman6@gmail.com")
   })
 
   it("should render View CV link", () => {
